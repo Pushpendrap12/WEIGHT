@@ -1,0 +1,14 @@
+d = input("Enter percentage rating from radar sensor:")
+d = float(d)
+x = (d/100)*(2.2)
+metal_jam = float(input("Eneter the percentage jam :"))
+x = (d/100)*(2.2)
+maximum_possible = (1-metal_jam/100)
+d = d*maximum_possible
+x = (d/100)*(2.2)
+V_metal = (2.983*x+0.003862*x*x*x+0.186*x*x)
+metal_density = 7040
+Metal_mass = V_metal*metal_density
+metal_mass_in_ton = Metal_mass/1000
+print("volume of metal = " , V_metal,"m3")
+print("Metal Mass = " ,metal_mass_in_ton , "ton")
